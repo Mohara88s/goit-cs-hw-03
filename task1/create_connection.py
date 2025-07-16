@@ -17,7 +17,7 @@ def create_connection():
         # Закриття з'єднання
         if conn:
             conn.close()
-            print("З'єднання з базою даних закрито")
+            # print("З'єднання з базою даних закрито")
 
 if __name__ == "__main__":
     with create_connection() as conn:

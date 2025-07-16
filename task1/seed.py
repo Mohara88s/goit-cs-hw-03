@@ -4,8 +4,9 @@ from create_connection import create_connection
 import psycopg2
 
 STATUSES = [('new',), ('in progress',), ('completed',)]
-NUMBER_USERS = 5
+NUMBER_USERS = 15
 NUMBER_TASKS = 15
+
 
 def generate_fake_data(number_users, number_tasks, statuses) -> tuple():
     fake_users = []# тут зберігатимемо користувачів
@@ -29,7 +30,6 @@ def generate_fake_data(number_users, number_tasks, statuses) -> tuple():
 
     return fake_users, fake_tasks
 
- fake_users
 
 def prepare_data(users, tasks, statuses) -> tuple():
 # готуємо список кортежів користувачів
