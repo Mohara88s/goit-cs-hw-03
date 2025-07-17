@@ -18,8 +18,8 @@ DROP TABLE IF EXISTS tasks;
 CREATE TABLE tasks (
     id SERIAL PRIMARY KEY,
     title VARCHAR(100) NOT NULL,
-    description TEXT NOT NULL,
-    status_id INTEGER REFERENCES status (id),
-    user_id INTEGER REFERENCES users (id)
-      ON DELETE CASCADE
+    description TEXT,
+    status_id INTEGER REFERENCES status(id),
+    user_id INTEGER REFERENCES users(id)
+        ON DELETE CASCADE
 );
